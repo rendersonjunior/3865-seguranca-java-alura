@@ -15,6 +15,12 @@
 
                 <form method="post" action="#" th:action="@{/medicos}" th:object="${dados}">
                     <input type="hidden" name="id" th:field="*{id}">
+                    <!--
+                    <input type="hidden" name="${\_csrf.parameterName}" value="${\_csrf.token}"/>
+
+                        Evita ataques CSRF passando o id para o post, mas no thymeleaf nao precisa pq o java é integrado
+                        a ele, mas dependendo da tecnologia, é necessário.
+                    -->
 
                     <div class="form-group">
                         <label for="nome">Nome:</label>
